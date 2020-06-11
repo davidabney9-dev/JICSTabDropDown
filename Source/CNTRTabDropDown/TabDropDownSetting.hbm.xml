@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="CNTRTabDropDown"
+                   assembly="CNTRTabDropDown">
+  <class name="TabDropDownSettings" table="CUS_CNTR_TabDropDownSettings">
+    <id name="SettingID" column="SettingID" type="Guid">
+      <generator class="guid" />
+    </id>
+    <property name="EnableDropDown" column="EnableDropDown" type="YesNo"/>
+    <property name="DisplayPages" column="DisplayPages" type="YesNo"/>
+    <property name="DisplaySubSections" column="DisplaySubSections" type="YesNo"/>
+    <property name="DisplaySubPagesPortlets" column="DisplaySubPagesPortlets" type="YesNo"/>
+    <property name="DisplayAlphaOrder" column="DisplayAlphaOrder" type="YesNo"/>
+  </class>
+</hibernate-mapping>

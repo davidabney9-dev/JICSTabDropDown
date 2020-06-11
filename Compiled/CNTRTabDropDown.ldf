@@ -1,0 +1,19 @@
+# START - CNTR Tab Drop Down
+dn: CN=[CUS] CNTRTabDropDown,OU=PortletTemplates,CN=Portal,O=Jenzabar,C=US
+changetype: add
+jenzabar-ICSNET-GUID:: c+kq9yZ/ZkyVo6RAmmQ25w==
+objectClass: top
+objectClass: jenzabar-ICSNET-PortletTemplate
+displayName: CNTR Tab Drop Down
+jenzabar-ICSNET-PortletPath: CNTRTabDropDown,CNTRTabDropDown.TabDropDown
+jenzabar-ICSNET-ApplicationPointer: CN=CUS,OU=PortalApplications,CN=Portal,O=Jenzabar,C=US
+instanceType: 4
+objectCategory: CN=Portlet-Template,CN=Schema,cn=configuration,cn=x
+
+dn: OU=Operations,CN=[CUS] CNTRTabDropDown,OU=PortletTemplates,CN=Portal,O=Jenzabar,C=US
+changetype: add
+objectClass: top
+objectClass: organizationalUnit
+instanceType: 4
+objectCategory: CN=Organizational-Unit,CN=Schema,CN=Configuration,CN=X
+# END - CNTR Tab Drop Down
