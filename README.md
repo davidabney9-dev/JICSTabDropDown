@@ -1,7 +1,7 @@
 # JICSTabDropDown
 Displays a drop down list when you hover your cursor over the tabs of a JICS portal.
 
-==Function==
+# Function
 This custom will display a list of pages in a popup for the tab that the user has their mouse over.  The user can click a page in the list to be taken directly to that URL, rather than having to click on the tab first. In version 1.2, the tab drop down can display a second list of portlets, pages, or subsections. In addition, this custom works by calling a JQuery script when the user hovers over a tab, a AJAX Post is sent to a web service file in the CNTR Tab Drop Down Portlet that returns the list of page names and URLs based on the user's role.  Javascript must be enabled in the browser you are using for this custom to work. The CNTR Tab Drop Down Portlet contains a settings page that the administrator can use to set if the tab drop down list displays pages and/or sub-sections and if those items are displayed in alphabetical order.
 
 # New Installation
@@ -63,10 +63,10 @@ If you are using the more tab in your theme then you will have to modify the the
             }
          });
     }
-* '''This change will have to be added each time JICS is updated, unless you are using a custom theme'''
+* This change will have to be added each time JICS is updated, unless you are using a custom theme'
 
 Hide the page drop downs that display when you hover over tabs on the More tab
-1.  Add these lines to the CNTRTabDropDown.css file:
+* Add these lines to the CNTRTabDropDown.css file:
     #headerTabs #moreList ul.pageList {
         display: none !important;
     }
@@ -87,17 +87,17 @@ You may notice certain tabs do not display a drop down list. In the javascript, 
 WARNING: You may not want to change the URL of the tab for certain reasons.  If that is the case then I would suggest editing the CNTRTabDropDown.js to where it will look for a specific tab title and hard code in the correct name you need to send.  The tab table underneath the portlet settings will help you identify any tabs that their display name does not match their corresponding identifying value.
 
 # Known Issues
-;Problem
-:The drop down displays on the left side of the screen and not under the tab that the mouse is hovering over.
+Problem
+The drop down displays on the left side of the screen and not under the tab that the mouse is hovering over.
 
-;Resolution
-:This is a CSS issue and can usually be fixed by adding '''float: left;''' to the '''headertabs li''' property in your portal''s CSS theme file. Please test this CSS change first, it may not work with all themes.
+Resolution
+This is a CSS issue and can usually be fixed by adding '''float: left;''' to the '''headertabs li''' property in your portal''s CSS theme file. Please test this CSS change first, it may not work with all themes.
 
-;Problem
-:If you use special characters in the tab name, such as /,\,+,*,&,?, or ; then the drop down will not display for that tab.
+Problem
+If you use special characters in the tab name, such as /,\,+,*,&,?, or ; then the drop down will not display for that tab.
 
-;Temporary Resolution
-:Add an "else if" statement to the Portal/Portlets/CUS/ICS/CNTRTabDropDown/js/CNTRTabDropDown.js file at line 16 to change the tab name to be what is stored in JICS.  For example:
+Temporary Resolution
+Add an "else if" statement to the Portal/Portlets/CUS/ICS/CNTRTabDropDown/js/CNTRTabDropDown.js file at line 16 to change the tab name to be what is stored in JICS.  For example:
     else if (tab_name == 'Tab / Name') {
         tab_name = "Tab  Name";
     }
